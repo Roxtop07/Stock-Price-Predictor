@@ -1,6 +1,6 @@
 # 📈 Stock Market Analysis & Prediction using LSTM
 
-![Banner](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Stock_Market_Graph.jpg/800px-Stock_Market_Graph.jpg)
+![Banner]()
 
 ## 🧾 Overview
 
