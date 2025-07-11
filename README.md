@@ -1,6 +1,6 @@
 # 📈 Stock Market Analysis & Prediction using LSTM
 
-![Banner]()
+![Banner](https://github.com/Roxtop07/Stock-Price-Predictor/blob/main/Blog%20Banner%20Design.jpg)
 
 ## 🧾 Overview
 
