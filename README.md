@@ -87,7 +87,7 @@ model.add(Dense(1))
 
 > 🏆 LSTM and XGBoost models performed best at capturing sequential patterns in stock data.
 
-![Model Comparison](Stock Price Prediction Companies Open Close.jpg)
+![Companies Volumes](https://github.com/Roxtop07/Stock-Price-Predictor/blob/main/Stock%20Price%20Prediction%20Companies%20Volume.jpg)
 
 ---
 
@@ -95,12 +95,11 @@ model.add(Dense(1))
 
 ### 📌 Closing Price Trend
 
-![Closing Price](https://miro.medium.com/v2/resize\:fit:1200/1*QFbSnVEM_XNheAqKb1nKzw.png)
+![Closing Price](https://github.com/Roxtop07/Stock-Price-Predictor/blob/main/Stock%20Price%20Prediction%20Project.jpg)
 
-### 🧠 Loss Curve
+### 🧠 Open Close Trend
 
-![Loss Curve](https://miro.medium.com/v2/resize\:fit:1100/format\:webp/1*f8sBn4aEhTkYTL4qJjsYIQ.png)
-
+![Loss Curve](https://github.com/Roxtop07/Stock-Price-Predictor/blob/main/Stock%20Price%20Prediction%20Companies%20Open%20Close.jpg)
 ---
 
 ## 🔮 Future Enhancements
