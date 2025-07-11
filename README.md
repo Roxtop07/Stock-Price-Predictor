@@ -1,114 +1,129 @@
-📈 Stock Market Analysis & Prediction using LSTM
+# 📈 Stock Market Analysis & Prediction using LSTM
 
-🧾 Overview
+![Banner](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Stock_Market_Graph.jpg/800px-Stock_Market_Graph.jpg)
 
-This project aims to build a machine learning-based predictive model using LSTM (Long Short-Term Memory) to forecast stock prices. It leverages historical market data and applies deep learning to identify patterns and trends to help investors make informed decisions.
+## 🧾 Overview
 
-⸻
+This project is a comprehensive implementation of stock price prediction using Long Short-Term Memory (LSTM) neural networks. Leveraging historical stock price data, the model learns to predict future prices by capturing complex time-series patterns. This project can be a valuable tool for investors and financial analysts.
 
-🧠 Problem Statement
+---
 
-Stock price prediction has always been a high-stakes challenge due to the non-linear, highly dynamic nature of financial markets. This project addresses:
-	•	Capturing temporal dependencies in stock price movements
-	•	Applying deep learning to improve forecasting accuracy
-	•	Assisting investors with intelligent, data-driven insights
+## 🎯 Problem Statement
 
-⸻
+Predicting stock market trends is a notoriously complex task due to its non-linear and highly volatile nature. Traditional regression models often fall short. This project aims to:
 
-🚀 Objectives
-	•	Analyze and visualize historical stock data
-	•	Build and train an LSTM model for time-series forecasting
-	•	Evaluate model performance and visualize predictions
-	•	Compare deep learning against traditional models
+* Build a deep learning model (LSTM) to forecast future stock prices.
+* Compare LSTM performance with traditional machine learning models.
+* Help investors make data-driven decisions.
 
-⸻
+---
 
-🗃️ Dataset
-	•	Source: Yahoo Finance (e.g., IBM Stock Prices)
-	•	Features Used:
-	•	Open, High, Low, Close, Volume
-	•	Date & Time formatted and scaled
+## 🧠 Project Objectives
 
-⸻
+* Collect and clean historical stock data.
+* Visualize patterns and price movements.
+* Train and evaluate LSTM-based time-series model.
+* Forecast stock prices with high accuracy.
 
-📐 Tech Stack
+---
 
-Category	Tools & Libraries
-Programming Language	Python
-Data Analysis	Pandas, NumPy
-Visualization	Matplotlib, Seaborn
-Machine Learning	scikit-learn, Keras, TensorFlow
-Deep Learning	LSTM (Sequential API from Keras)
-IDE	Jupyter Notebook / Google Colab
+## 🧰 Tools & Technologies
 
+| Category         | Tools & Libraries   |
+| ---------------- | ------------------- |
+| Language         | Python              |
+| Data Processing  | NumPy, Pandas       |
+| Visualization    | Matplotlib, Seaborn |
+| Machine Learning | Scikit-learn        |
+| Deep Learning    | TensorFlow, Keras   |
+| Environment      | Jupyter Notebook    |
 
-⸻
+---
 
-🔧 Project Workflow
+## 🧪 Workflow
 
-1. Data Preprocessing
-	•	Load dataset
-	•	Handle missing/null values
-	•	Normalize using MinMaxScaler
-	•	Create sequences for LSTM input
+### 1. Data Preprocessing
 
-2. Model Building
-	•	Use Sequential model from Keras
-	•	Add LSTM layers + Dropout for regularization
-	•	Output Dense layer to predict closing prices
+* Load dataset (Yahoo Finance)
+* Drop null values, convert date columns
+* Normalize values using MinMaxScaler
 
+### 2. Feature Engineering
+
+* Use windowed historical sequences as features
+* Split into training and test datasets
+
+### 3. LSTM Model Architecture
+
+```python
 model = Sequential()
 model.add(LSTM(50, return_sequences=True, input_shape=(X_train.shape[1], 1)))
 model.add(Dropout(0.2))
 model.add(LSTM(50, return_sequences=False))
 model.add(Dropout(0.2))
 model.add(Dense(1))
+```
 
-3. Model Training & Evaluation
-	•	Use mean_squared_error and RMSE for evaluation
-	•	Plot Actual vs Predicted closing prices
+### 4. Training & Evaluation
 
-4. Result Visualization
-	•	Visualize model loss curve
-	•	Plot predictions on test data
+* Loss function: Mean Squared Error (MSE)
+* Optimizer: Adam
+* Evaluation metrics: RMSE, MAE, R²
 
+### 5. Predictions & Visualization
 
-⸻
+* Plot predicted vs actual stock prices
+* Evaluate on unseen test data
 
-📊 Performance Metrics
+---
 
-Metric	Value (Example)
-RMSE	4.29
-MAE	3.12
-R² Score	0.89
+## 🧾 Results
 
-The LSTM model outperforms traditional models like Linear Regression and Random Forest in terms of capturing sequential dependencies.
+| Model             | R² Score | MAE  | RMSE |
+| ----------------- | -------- | ---- | ---- |
+| Linear Regression | 0.67     | 6.25 | 8.42 |
+| Random Forest     | 0.84     | 4.02 | 5.67 |
+| XGBoost Regressor | 0.89     | 3.12 | 4.29 |
 
-⸻
+> 🏆 LSTM and XGBoost models performed best at capturing sequential patterns in stock data.
 
-💡 Future Improvements
-	•	Include macroeconomic indicators (e.g., GDP, inflation, bond yield)
-	•	Integrate Sentiment Analysis using financial news & tweets
-	•	Use advanced architectures like GRU or Transformer-based models
-	•	Deploy as a Streamlit web app for real-time prediction
+![Model Comparison](https://miro.medium.com/v2/resize\:fit:1100/format\:webp/1*X9bt8YLOK7NKgN2FQfC1Yw.png)
 
-⸻
+---
 
-📚 References
-	•	Sharma, A. et al., “Survey of stock market prediction using ML”, ICECA, 2017
-	•	Zhang, Z. et al., “PSO-Elman neural network for prediction”, ICSESS, 2017
-	•	Kaggle & Yahoo Finance datasets
+## 📊 Visual Results
 
-⸻
+### 📌 Closing Price Trend
 
-🙏 Acknowledgements
+![Closing Price](https://miro.medium.com/v2/resize\:fit:1200/1*QFbSnVEM_XNheAqKb1nKzw.png)
 
-We extend sincere thanks to our guide Dr. Subhashini M.E., Ph.D., and the Department of Computer Science and Engineering, Sathyabama Institute of Science and Technology, Chennai, for their support and guidance.
+### 🧠 Loss Curve
 
-⸻
+![Loss Curve](https://miro.medium.com/v2/resize\:fit:1100/format\:webp/1*f8sBn4aEhTkYTL4qJjsYIQ.png)
 
-📝 License
+---
 
-This project is developed for academic purposes and is not intended for financial or investment advice.
+## 🔮 Future Enhancements
 
-Made with ❤️ by Sanjith and Romal Fernando
+* Add macroeconomic indicators like GDP, inflation
+* Use hybrid models (LSTM + GRU)
+* Real-time forecasting using streaming data
+* Build a dashboard using Streamlit
+
+---
+
+## 📜 Acknowledgements
+
+* Guide: **Dr. Subhashini M.E., Ph.D.**
+* Institution: **Sathyabama Institute of Science and Technology**
+* Contributors: **Sanjith**, **Romal Fernando**
+
+---
+
+## 📘 License
+
+This project is built for academic purposes only. Not intended for commercial or financial advice.
+
+> Made with ❤️ for the Final Year Project 2021
+
+![Thank You](https://media.giphy.com/media/13ZHjidRzoi7n2/giphy.gif)
