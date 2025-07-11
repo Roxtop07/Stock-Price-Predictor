@@ -124,6 +124,6 @@ model.add(Dense(1))
 
 This project is built for academic purposes only. Not intended for commercial or financial advice.
 
-> Made with ❤️ for the Final Year Project 2021
+> Made with ❤️ for the Final Project of Elevate Labs
 
 ![Thank You](https://media.giphy.com/media/13ZHjidRzoi7n2/giphy.gif)
