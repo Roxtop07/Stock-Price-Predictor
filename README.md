@@ -1,64 +1,114 @@
-Stock Market Analysis & Prediction using LSTM
+📈 Stock Market Analysis & Prediction using LSTM
 
-📌 Project Overview
+🧾 Overview
 
-This project focuses on analyzing historical stock market data and predicting future stock prices using Long Short-Term Memory (LSTM), a type of recurrent neural network (RNN) well-suited for time series forecasting.
-
-🔍 Problem Statement
-
-Stock market price movements are sequential and influenced by multiple factors. Traditional models often fail to capture the temporal dependencies in stock prices. This project addresses the need for accurate stock price forecasting using LSTM to capture sequential patterns in historical data.
-
-🧠 Model Used
-	•	LSTM (Long Short-Term Memory): A deep learning architecture capable of learning long-term dependencies in time series data.
-
-📊 Technologies & Tools
-	•	Python
-	•	NumPy, Pandas
-	•	Matplotlib, Seaborn
-	•	Scikit-learn
-	•	TensorFlow / Keras
-	•	Jupyter Notebook
-
-📁 Files in This Repository
-	•	Stock Market Analysis Prediction LSTM.ipynb – The main notebook containing:
-	•	Data preprocessing & visualization
-	•	Train-test splitting
-	•	LSTM model architecture
-	•	Model training and evaluation
-	•	Future predictions & plotting
-
-📈 Workflow
-	1.	Data Loading & Preprocessing
-	•	Load historical stock price data
-	•	Normalize features using MinMaxScaler
-	2.	Data Visualization
-	•	Plot historical stock trends
-	•	Correlation heatmaps
-	3.	Model Building
-	•	Design LSTM network with appropriate layers
-	•	Compile with loss function & optimizer
-	4.	Model Training & Evaluation
-	•	Fit the model on training data
-	•	Validate using test data
-	•	Evaluate using RMSE or similar metrics
-	5.	Future Predictions
-	•	Predict stock prices for unseen data
-	•	Visualize actual vs predicted results
-
-📌 Results
-	•	The LSTM model demonstrates the ability to learn temporal patterns from stock data.
-	•	Produces smooth predictions that follow real stock price trends.
-
-🚀 Future Enhancements
-	•	Incorporate more financial indicators like RSI, MACD, Bollinger Bands
-	•	Use multi-feature LSTM models
-	•	Integrate attention mechanisms for better performance
-	•	Deploy as a Streamlit or Flask web app
-
-🙌 Acknowledgments
-
-Inspired by various open-source contributions to financial forecasting using deep learning.
+This project aims to build a machine learning-based predictive model using LSTM (Long Short-Term Memory) to forecast stock prices. It leverages historical market data and applies deep learning to identify patterns and trends to help investors make informed decisions.
 
 ⸻
 
-⚠️ Disclaimer: This project is for educational purposes only. It is not intended for real-world financial decision-making or investment advice.
+🧠 Problem Statement
+
+Stock price prediction has always been a high-stakes challenge due to the non-linear, highly dynamic nature of financial markets. This project addresses:
+	•	Capturing temporal dependencies in stock price movements
+	•	Applying deep learning to improve forecasting accuracy
+	•	Assisting investors with intelligent, data-driven insights
+
+⸻
+
+🚀 Objectives
+	•	Analyze and visualize historical stock data
+	•	Build and train an LSTM model for time-series forecasting
+	•	Evaluate model performance and visualize predictions
+	•	Compare deep learning against traditional models
+
+⸻
+
+🗃️ Dataset
+	•	Source: Yahoo Finance (e.g., IBM Stock Prices)
+	•	Features Used:
+	•	Open, High, Low, Close, Volume
+	•	Date & Time formatted and scaled
+
+⸻
+
+📐 Tech Stack
+
+Category	Tools & Libraries
+Programming Language	Python
+Data Analysis	Pandas, NumPy
+Visualization	Matplotlib, Seaborn
+Machine Learning	scikit-learn, Keras, TensorFlow
+Deep Learning	LSTM (Sequential API from Keras)
+IDE	Jupyter Notebook / Google Colab
+
+
+⸻
+
+🔧 Project Workflow
+
+1. Data Preprocessing
+	•	Load dataset
+	•	Handle missing/null values
+	•	Normalize using MinMaxScaler
+	•	Create sequences for LSTM input
+
+2. Model Building
+	•	Use Sequential model from Keras
+	•	Add LSTM layers + Dropout for regularization
+	•	Output Dense layer to predict closing prices
+
+model = Sequential()
+model.add(LSTM(50, return_sequences=True, input_shape=(X_train.shape[1], 1)))
+model.add(Dropout(0.2))
+model.add(LSTM(50, return_sequences=False))
+model.add(Dropout(0.2))
+model.add(Dense(1))
+
+3. Model Training & Evaluation
+	•	Use mean_squared_error and RMSE for evaluation
+	•	Plot Actual vs Predicted closing prices
+
+4. Result Visualization
+	•	Visualize model loss curve
+	•	Plot predictions on test data
+
+
+⸻
+
+📊 Performance Metrics
+
+Metric	Value (Example)
+RMSE	4.29
+MAE	3.12
+R² Score	0.89
+
+The LSTM model outperforms traditional models like Linear Regression and Random Forest in terms of capturing sequential dependencies.
+
+⸻
+
+💡 Future Improvements
+	•	Include macroeconomic indicators (e.g., GDP, inflation, bond yield)
+	•	Integrate Sentiment Analysis using financial news & tweets
+	•	Use advanced architectures like GRU or Transformer-based models
+	•	Deploy as a Streamlit web app for real-time prediction
+
+⸻
+
+📚 References
+	•	Sharma, A. et al., “Survey of stock market prediction using ML”, ICECA, 2017
+	•	Zhang, Z. et al., “PSO-Elman neural network for prediction”, ICSESS, 2017
+	•	Kaggle & Yahoo Finance datasets
+
+⸻
+
+🙏 Acknowledgements
+
+We extend sincere thanks to our guide Dr. Subhashini M.E., Ph.D., and the Department of Computer Science and Engineering, Sathyabama Institute of Science and Technology, Chennai, for their support and guidance.
+
+⸻
+
+📝 License
+
+This project is developed for academic purposes and is not intended for financial or investment advice.
+
+Made with ❤️ by Sanjith and Romal Fernando
