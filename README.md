@@ -87,7 +87,7 @@ model.add(Dense(1))
 
 > 🏆 LSTM and XGBoost models performed best at capturing sequential patterns in stock data.
 
-![Model Comparison](https://miro.medium.com/v2/resize\:fit:1100/format\:webp/1*X9bt8YLOK7NKgN2FQfC1Yw.png)
+![Model Comparison](Stock Price Prediction Companies Open Close.jpg)
 
 ---
 
